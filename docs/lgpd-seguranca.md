@@ -21,7 +21,7 @@ Os dados são usados para autenticação, criação de pedidos, identificacao do
 - Consentimento explicito para participar da fidelidade.
 - Pagamento mock sem integração com provedor real.
 
-## Retencao e anonimização
+## Retenção e anonimização
 
 Em um ambiente real, a política deve definir prazo de retenção para pedidos, auditoria e dados pessoais. A anonimização pode substituir nome, email, telefone e CPF quando não houver mais finalidade legítima para manter esses dados identificáveis.
 
