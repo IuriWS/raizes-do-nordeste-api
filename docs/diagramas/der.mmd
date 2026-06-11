@@ -1,0 +1,36 @@
+erDiagram
+  USUARIO ||--o| CLIENTE : possui
+  CLIENTE ||--o{ PEDIDO : realiza
+  UNIDADE ||--o{ PEDIDO : recebe
+  PEDIDO ||--o{ ITEM_PEDIDO : contem
+  PRODUTO ||--o{ ITEM_PEDIDO : compoe
+  PEDIDO ||--o| PAGAMENTO : gera
+  UNIDADE ||--o{ ESTOQUE : controla
+  PRODUTO ||--o{ ESTOQUE : possui
+  UNIDADE ||--o{ CARDAPIO_UNIDADE : publica
+  PRODUTO ||--o{ CARDAPIO_UNIDADE : aparece
+  CLIENTE ||--o| FIDELIDADE : acumula
+  CLIENTE ||--o{ MOVIMENTO_FIDELIDADE : registra
+  USUARIO ||--o{ AUDITORIA : aciona
+
+  USUARIO {
+    int id PK
+    string email
+    string senhaHash
+    string role
+  }
+  PEDIDO {
+    int id PK
+    int clienteId FK
+    int unidadeId FK
+    string canalPedido
+    string status
+    decimal total
+  }
+  PAGAMENTO {
+    int id PK
+    int pedidoId FK
+    string formaPagamento
+    string status
+    decimal valor
+  }

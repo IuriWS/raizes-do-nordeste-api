@@ -1,0 +1,20 @@
+sequenceDiagram
+  participant Cliente
+  participant API
+  participant PedidoService
+  participant EstoqueService
+  participant PagamentoMockService
+  participant PedidoRepository
+  participant AuditoriaService
+
+  Cliente->>API: POST /pedidos
+  API->>PedidoService: criar pedido
+  PedidoService->>EstoqueService: validar e reservar estoque
+  PedidoService->>PedidoRepository: salvar pedido, itens e pagamento pendente
+  PedidoService->>AuditoriaService: registrar pedido criado
+  Cliente->>API: POST /pagamentos/mock/:pedidoId
+  API->>PagamentoMockService: processar resultado
+  PagamentoMockService->>PedidoRepository: atualizar pagamento e status
+  PagamentoMockService->>EstoqueService: restaurar estoque se recusado
+  PagamentoMockService->>AuditoriaService: registrar resultado
+  API-->>Cliente: pedido atualizado

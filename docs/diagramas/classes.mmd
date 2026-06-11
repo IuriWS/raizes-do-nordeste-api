@@ -1,0 +1,61 @@
+classDiagram
+  class Usuario {
+    id
+    nome
+    email
+    role
+    ativo
+  }
+  class Cliente {
+    telefone
+    cpf
+    consentimentoFidelidade
+  }
+  class Unidade {
+    nome
+    cidade
+    endereco
+    ativa
+  }
+  class Produto {
+    nome
+    descricao
+    preco
+    ativo
+  }
+  class Estoque {
+    quantidadeAtual
+    quantidadeMinima
+  }
+  class Pedido {
+    canalPedido
+    status
+    total
+  }
+  class ItemPedido {
+    quantidade
+    precoUnitario
+    subtotal
+  }
+  class Pagamento {
+    formaPagamento
+    status
+    providerMockId
+  }
+  class Fidelidade {
+    saldoPontos
+  }
+  class Auditoria {
+    acao
+    recurso
+    detalhes
+  }
+
+  Usuario "1" --> "0..1" Cliente
+  Cliente "1" --> "*" Pedido
+  Pedido "1" --> "*" ItemPedido
+  Pedido "1" --> "1" Pagamento
+  Unidade "1" --> "*" Pedido
+  Produto "1" --> "*" ItemPedido
+  Cliente "1" --> "1" Fidelidade
+  Usuario "1" --> "*" Auditoria
