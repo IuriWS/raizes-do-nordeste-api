@@ -56,6 +56,8 @@ classDiagram
   Pedido "1" --> "*" ItemPedido
   Pedido "1" --> "1" Pagamento
   Unidade "1" --> "*" Pedido
+  Unidade "1" --> "*" Estoque : possui
   Produto "1" --> "*" ItemPedido
+  Produto "1" --> "*" Estoque : compõe
   Cliente "1" --> "1" Fidelidade
   Usuario "1" --> "*" Auditoria
