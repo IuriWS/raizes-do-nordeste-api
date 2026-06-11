@@ -54,7 +54,7 @@ async function main() {
     create: {
       nome: 'Raizes Campus',
       cidade: 'Natal',
-      endereco: 'Rua Universitaria, 250',
+      endereco: 'Rua das Palmeiras, 250',
       ativa: true
     }
   });

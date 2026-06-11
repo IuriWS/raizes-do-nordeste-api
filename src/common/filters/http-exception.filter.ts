@@ -27,13 +27,13 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
   private normalize(exception: unknown) {
     if (exception instanceof Prisma.PrismaClientKnownRequestError) {
-      // Codigos conhecidos do Prisma viram respostas HTTP estaveis para o cliente.
+      // Códigos conhecidos do Prisma viram respostas HTTP estáveis para o cliente.
       if (exception.code === 'P2002') {
         return {
           statusCode: HttpStatus.CONFLICT,
           error: 'CONFLICT',
           message: 'Registro duplicado.',
-          details: [{ field: String(exception.meta?.target ?? 'unique'), issue: 'valor ja utilizado' }]
+          details: [{ field: String(exception.meta?.target ?? 'unique'), issue: 'valor já utilizado' }]
         };
       }
 
@@ -41,7 +41,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
         return {
           statusCode: HttpStatus.NOT_FOUND,
           error: 'NOT_FOUND',
-          message: 'Registro nao encontrado.',
+          message: 'Registro não encontrado.',
           details: []
         };
       }
@@ -61,9 +61,9 @@ export class HttpExceptionFilter implements ExceptionFilter {
     }
 
     return {
-      statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
-      error: 'INTERNAL_ERROR',
-      message: 'Erro interno inesperado.',
+      statusCode: 500,
+      error: 'UNEXPECTED_ERROR',
+      message: 'Erro inesperado.',
       details: []
     };
   }

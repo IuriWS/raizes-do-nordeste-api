@@ -70,7 +70,7 @@ describe('API principal (e2e)', () => {
     expect(response.body.usuario.senhaHash).toBeUndefined();
   });
 
-  it('cadastro público sempre cria cliente e rejeita role interno', async () => {
+  it('cadastro público sempre cria cliente e rejeita perfil administrativo', async () => {
     await request(httpServer)
       .post('/auth/register')
       .send({

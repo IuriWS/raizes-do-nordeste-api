@@ -10,7 +10,7 @@ export class CreateUnidadeDto {
   @IsString()
   cidade: string;
 
-  @ApiProperty({ example: 'Rua Universitaria, 250' })
+  @ApiProperty({ example: 'Rua das Palmeiras, 250' })
   @IsString()
   endereco: string;
 
