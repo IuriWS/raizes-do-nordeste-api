@@ -29,6 +29,8 @@ O projeto organiza cada área em camadas:
 - `prisma`: acesso ao banco via Prisma.
 - `common`: guards, decorators e filtro global de erro.
 
+![Diagrama de classes](docs/diagramas/renderizados/classes.svg)
+
 ## Requisitos funcionais
 
 - Cadastro e login de usuários.
@@ -125,6 +127,8 @@ http://localhost:3000/api/docs
 
 ## Fluxo principal para testar
 
+![Fluxo de pedido e pagamento](docs/diagramas/renderizados/sequencia-pedido-pagamento.svg)
+
 1. Fazer login em `POST /auth/login` com `cliente@raizes.com`.
 2. Criar pedido em `POST /pedidos` com `canalPedido`, `unidadeId`, `formaPagamento` e itens.
 3. Processar pagamento em `POST /pagamentos/mock/:pedidoId` com resultado `APROVADO` ou `RECUSADO`.
@@ -143,6 +147,8 @@ Arquivos:
 Importe os dois no Postman, rode o login e use o token retornado na variável `accessToken`.
 
 ## Documentação
+
+![DER](docs/diagramas/renderizados/der.svg)
 
 - Documentação técnica: `docs/`.
 - Endpoints: `docs/endpoints.md`.
