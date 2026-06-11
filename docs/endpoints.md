@@ -42,7 +42,7 @@ Todos os endpoints, exceto login e registro, exigem `Authorization: Bearer <toke
 | Método | Rota | Descrição |
 | --- | --- | --- |
 | GET | `/estoque?unidadeId=1` | Lista estoque da unidade. |
-| POST | `/estoque/movimentos` | Registra entrada, saida ou estorno. |
+| POST | `/estoque/movimentos` | Registra entrada, saída ou estorno. |
 | GET | `/estoque/:unidadeId/:produtoId` | Consulta estoque de um produto. |
 
 ## Pedidos
@@ -80,7 +80,7 @@ Todos os endpoints, exceto login e registro, exigem `Authorization: Bearer <toke
 | PATCH | `/promocoes/:id` | Atualiza promoção. ADMIN ou GERENTE. |
 | GET | `/auditoria` | Lista registros de auditoria. ADMIN ou GERENTE. |
 
-## Erro padrao
+## Erro padrão
 
 ```json
 {

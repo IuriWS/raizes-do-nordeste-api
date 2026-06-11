@@ -56,4 +56,4 @@ Use esta lista antes de enviar o projeto ou apresentar a API.
 
 - [ ] Executar `npm run package:delivery`.
 - [ ] Conferir `entrega/raizes-do-nordeste-api-entrega.zip`.
-- [ ] Verificar que o pacote não inclui `node_modules`, `dist`, `.env`, temporários ou arquivos internos.
+- [ ] Verificar que o pacote não inclui `node_modules`, `dist`, `.env`, temporários ou arquivos locais de validação.

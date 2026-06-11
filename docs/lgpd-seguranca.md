@@ -1,34 +1,34 @@
-# LGPD e Seguranca
+# LGPD e Segurança
 
 ## Dados pessoais tratados
 
-- Nome e email do usuario.
+- Nome e email do usuário.
 - Telefone e CPF opcional do cliente.
 - Consentimento para fidelidade.
-- Historico de pedidos e movimentos de fidelidade.
+- Histórico de pedidos e movimentos de fidelidade.
 
 ## Finalidade
 
-Os dados sao usados para autenticacao, criacao de pedidos, identificacao do cliente, programa de fidelidade e auditoria de acoes sensiveis.
+Os dados são usados para autenticação, criação de pedidos, identificacao do cliente, programa de fidelidade e auditoria de ações sensíveis.
 
 ## Medidas implementadas
 
 - Hash de senha com bcrypt.
-- Autenticacao JWT.
+- Autenticação JWT.
 - Controle de acesso por perfil.
 - Remocao de `senhaHash` nas respostas.
 - Auditoria para login, pedido, pagamento, estoque e fidelidade.
 - Consentimento explicito para participar da fidelidade.
-- Pagamento mock sem integracao com provedor real.
+- Pagamento mock sem integração com provedor real.
 
-## Retencao e anonimizacao
+## Retencao e anonimização
 
 Em um ambiente real, a política deve definir prazo de retenção para pedidos, auditoria e dados pessoais. A anonimização pode substituir nome, email, telefone e CPF quando não houver mais finalidade legítima para manter esses dados identificáveis.
 
 ## Cuidados recomendados
 
 - Trocar `JWT_SECRET` em cada ambiente.
-- Usar HTTPS em producao.
+- Usar HTTPS em produção.
 - Restringir acesso direto ao banco.
 - Registrar incidentes e revisar auditorias.
-- Evitar salvar dados sensiveis em logs.
+- Evitar salvar dados sensíveis em logs.

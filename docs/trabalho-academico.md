@@ -28,13 +28,12 @@ Data: 09 de junho de 2026
 16. Entrega técnica
 17. Conclusão
 18. Referências
-19. Declaração de uso de IA
 
 ## 3. Introdução
 
-Este trabalho apresenta uma API REST para uma rede de lanchonetes em expansão, adaptada ao estudo de caso de atendimento em ambiente universitário. A solução centraliza pedidos vindos de diferentes canais e organiza funcionalidades essenciais para uma operação realista: autenticação, perfis de acesso, cardápio por unidade, estoque, pagamento simulado, fidelidade e auditoria.
+Este trabalho apresenta uma API REST para uma rede de lanchonetes em expansão, adaptada ao estudo de caso de atendimento em ambiente de restaurante. A solução centraliza pedidos vindos de diferentes canais e organiza funcionalidades essenciais para uma operação realista: autenticação, perfis de acesso, cardápio por unidade, estoque, pagamento simulado, fidelidade e auditoria.
 
-A proposta resolve um problema comum em restaurantes universitários e lanchonetes de campus: a fragmentação entre pedidos presenciais, totens, aplicativos e retirada agendada. Sem uma API central, cada canal tende a manter dados próprios, dificultando o controle de estoque, o acompanhamento do preparo e a análise de demanda.
+A proposta resolve um problema comum em restaurantes e lanchonetes: a fragmentação entre pedidos presenciais, totens, aplicativos e retirada agendada. Sem uma API central, cada canal tende a manter dados próprios, dificultando o controle de estoque, o acompanhamento do preparo e a análise de demanda.
 
 ## 4. Objetivos
 
@@ -42,7 +41,7 @@ O objetivo principal é implementar uma API funcional com autenticação, perfis
 
 Objetivos específicos:
 
-- Modelar entidades principais do domínio de restaurante universitário.
+- Modelar entidades principais do domínio de restaurante.
 - Implementar endpoints REST com validação de entrada e respostas padronizadas.
 - Proteger rotas com JWT e autorização por perfil.
 - Registrar a origem de cada pedido por meio de `canalPedido`.
@@ -55,7 +54,7 @@ Objetivos específicos:
 
 A empresa precisa registrar pedidos de APP, TOTEM, BALCÃO, PICKUP e WEB. Sem um back-end centralizado, o controle de estoque, status e origem dos pedidos fica disperso.
 
-No contexto universitário, a dispersão causa filas maiores, baixa previsibilidade de preparo, risco de venda de itens indisponíveis e dificuldade para medir quais canais são mais usados. A API proposta atua como camada central de integração: todos os canais enviam pedidos para a mesma base, e a cozinha/operação acompanha status, pagamento e estoque em um fluxo único.
+No contexto de atendimento, a dispersão causa filas maiores, baixa previsibilidade de preparo, risco de venda de itens indisponíveis e dificuldade para medir quais canais são mais usados. A API proposta atua como camada central de integração: todos os canais enviam pedidos para a mesma base, e a cozinha/operação acompanha status, pagamento e estoque em um fluxo único.
 
 ## 6. Requisitos funcionais
 
@@ -77,7 +76,7 @@ No contexto universitário, a dispersão causa filas maiores, baixa previsibilid
 - Erro padronizado.
 - Testes unitários e e2e com Jest.
 - Execução local com Docker Compose.
-- Documentação técnica e acadêmica.
+- Documentação técnica.
 
 ## 8. Priorização do MVP
 
@@ -142,7 +141,7 @@ A entrega inclui código NestJS, Prisma schema, migration, seed, Docker Compose,
 npm run package:delivery
 ```
 
-O zip final remove dependências instaladas, build local, arquivos temporários e arquivos internos, mantendo apenas os artefatos necessários para avaliação e execução.
+O zip final remove dependências instaladas, build local, arquivos temporários e arquivos locais de validação, mantendo apenas os artefatos necessários para avaliação e execução.
 
 ## 19. Conclusão
 
@@ -156,7 +155,3 @@ Como evolução, a solução pode receber pagamento real, cupons de fidelidade, 
 - Documentação oficial do Prisma.
 - Documentação oficial do PostgreSQL.
 - Documentação oficial do Swagger/OpenAPI.
-
-## 21. Declaração de uso de IA
-
-Ferramentas de IA foram utilizadas como apoio na organização, geração de ideias, revisão e apoio técnico. Esta declaração deve ser ajustada pelo aluno conforme o uso real durante a atividade.

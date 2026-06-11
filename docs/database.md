@@ -7,7 +7,7 @@ docker compose up --build -d
 docker compose exec api npm run prisma:seed
 ```
 
-Esse fluxo cria a imagem da API, sobe o PostgreSQL, aplica migrations no inicio do container da API e carrega os dados de demonstracao pelo seed.
+Esse fluxo cria a imagem da API, sobe o PostgreSQL, aplica migrations no início do container da API e carrega os dados de demonstração pelo seed.
 
 ## Subir somente PostgreSQL
 
@@ -15,7 +15,7 @@ Esse fluxo cria a imagem da API, sobe o PostgreSQL, aplica migrations no inicio 
 docker compose up -d postgres
 ```
 
-## Variavel de ambiente
+## Variável de ambiente
 
 Copie `.env.example` para `.env` e mantenha:
 
@@ -31,7 +31,7 @@ Gerar e aplicar migration em ambiente local:
 npm run prisma:migrate -- --name init
 ```
 
-A migration inicial ja esta versionada em:
+A migration inicial já está versionada em:
 
 ```text
 prisma/migrations/20260609000000_init/migration.sql
@@ -45,7 +45,7 @@ npm run prisma:seed
 
 O seed cria usuários por perfil, duas unidades, cinco produtos, cardápio, estoque inicial e fidelidade do cliente demo.
 
-## Validacoes uteis
+## Validações uteis
 
 ```bash
 npm run prisma:generate

@@ -1,8 +1,8 @@
 # Deploy Local com Docker
 
-Este runbook descreve o deploy local da API com Docker Compose, usado para validacao no WSL e demonstracao do estudo de caso.
+Este runbook descreve o deploy local da API com Docker Compose, usado para validação no WSL e demonstração do estudo de caso.
 
-## Pre-requisitos
+## Pré-requisitos
 
 - Docker Desktop instalado e integrado ao WSL.
 - Distribuicao Ubuntu disponivel no WSL.
@@ -39,7 +39,7 @@ docker logs -f raizes_api
 docker logs -f raizes_postgres
 ```
 
-Use os logs para verificar inicializacao, migrations, erros de conexao com banco e mapeamento de rotas.
+Use os logs para verificar inicializacao, migrations, erros de conexão com banco e mapeamento de rotas.
 
 ## Encerrar ambiente
 
@@ -47,10 +47,10 @@ Use os logs para verificar inicializacao, migrations, erros de conexao com banco
 docker compose down
 ```
 
-Para remover tambem o volume do banco local:
+Para remover também o volume do banco local:
 
 ```bash
 docker compose down -v
 ```
 
-Use `-v` apenas quando for aceitavel apagar os dados locais de demonstracao.
+Use `-v` apenas quando for aceitavel apagar os dados locais de demonstração.

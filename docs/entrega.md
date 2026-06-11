@@ -1,6 +1,6 @@
 # Pacote de Entrega
 
-Este documento descreve como gerar uma copia limpa do projeto para envio, revisao academica ou apresentacao tecnica.
+Este documento descreve como gerar uma cópia limpa do projeto para envio, revisão ou apresentação técnica.
 
 ## Gerar pacote
 
@@ -16,28 +16,28 @@ O script cria:
 entrega/raizes-do-nordeste-api-entrega.zip
 ```
 
-## Conteudo incluido
+## Conteúdo incluído
 
-- Codigo-fonte `src/`.
+- Código-fonte `src/`.
 - Testes `test/`.
 - Schema, migrations e seed Prisma.
-- Documentacao `docs/`.
+- Documentação `docs/`.
 - Diagramas renderizados e PDF final.
 - Collection e environment Postman.
 - Dockerfile e Docker Compose.
-- Configuracoes TypeScript, NestJS, Jest e Prisma.
+- Configurações TypeScript, NestJS, Jest e Prisma.
 - Arquivos `package.json` e `package-lock.json`.
 
-## Conteudo excluido
+## Conteúdo excluído
 
-- Dependencias instaladas.
+- Dependências instaladas.
 - Build local.
 - Coverage.
-- Arquivos temporarios.
-- Variaveis reais de ambiente.
-- Arquivos internos de validacao.
+- Arquivos temporários.
+- Variáveis reais de ambiente.
+- Arquivos locais de validação.
 
-## Validacao antes de enviar
+## Validação antes de enviar
 
 ```bash
 npm run lint
@@ -47,6 +47,6 @@ npm run test:e2e
 npm run package:delivery
 ```
 
-Antes do envio, abra o zip e confira se a raiz contem `README.md`, `src/`, `docs/`, `prisma/`, `postman/` e os arquivos Docker.
+Antes do envio, abra o zip e confira se a raiz contém `README.md`, `src/`, `docs/`, `prisma/`, `postman/` e os arquivos Docker.
 
-Use tambem `docs/checklist-final.md` para conferir execucao, testes, Swagger, Postman, diagramas e PDF final.
+Use também `docs/checklist-final.md` para conferir execução, testes, Swagger, Postman, diagramas e PDF final.

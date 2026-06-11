@@ -1,6 +1,6 @@
 # API
 
-Este documento resume as regras operacionais de rotas, autenticacao, payloads e erros da API.
+Este documento resume as regras operacionais de rotas, autenticação, payloads e erros da API.
 
 ## Base URL local
 
@@ -8,7 +8,7 @@ Este documento resume as regras operacionais de rotas, autenticacao, payloads e 
 http://localhost:3000
 ```
 
-## Autenticacao
+## Autenticação
 
 Use `POST /auth/login` para obter `accessToken`. Nos endpoints protegidos, envie:
 
@@ -21,8 +21,8 @@ Authorization: Bearer <accessToken>
 - ADMIN: acesso administrativo completo.
 - GERENTE: gerencia catálogo, estoque, pedidos, promoções e auditoria.
 - COZINHA: consulta pedidos e atualiza preparo.
-- ATENDENTE: cria pedidos de balcao e consulta pedidos.
-- CLIENTE: cria e consulta os proprios pedidos e fidelidade.
+- ATENDENTE: cria pedidos de balcão e consulta pedidos.
+- CLIENTE: cria e consulta os próprios pedidos e fidelidade.
 
 ## Pedido multicanal
 
@@ -55,7 +55,7 @@ AGUARDANDO_PAGAMENTO -> PAGAMENTO_RECUSADO
 AGUARDANDO_PAGAMENTO/PAGO/EM_PREPARO/PRONTO -> CANCELADO
 ```
 
-Pagamento mock so processa pedidos em `AGUARDANDO_PAGAMENTO` com pagamento `PENDENTE`.
+Pagamento mock só processa pedidos em `AGUARDANDO_PAGAMENTO` com pagamento `PENDENTE`.
 
 ## Erros
 
@@ -72,7 +72,7 @@ Todas as falhas usam o formato:
 }
 ```
 
-## Documentacao interativa
+## Documentação interativa
 
 Swagger fica em:
 
