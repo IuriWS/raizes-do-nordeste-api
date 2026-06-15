@@ -1,0 +1,19 @@
+flowchart LR
+  Cliente[Cliente]
+  Atendente[Atendente]
+  Cozinha[Cozinha]
+  Gestao[Gerente/Admin]
+  Gateway[Pagamento mock]
+
+  Cliente --> Login[Login]
+  Cliente --> Cardapio[Consultar cardápio]
+  Cliente --> CriarPedido[Criar pedido]
+  Cliente --> Fidelidade[Consultar fidelidade]
+  Atendente --> CriarPedido
+  CriarPedido --> Pagamento[Solicitar pagamento]
+  Pagamento --> Gateway
+  Cozinha --> Status[Atualizar status]
+  Gestao --> Estoque[Controlar estoque]
+  Gestao --> Produtos[Gerenciar produtos]
+  Gestao --> Unidades[Gerenciar unidades]
+  Gestao --> Auditoria[Auditar ações]
