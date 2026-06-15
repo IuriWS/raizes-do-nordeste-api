@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+pacote
+.tmp
+.env
+*.log
+*.zip
